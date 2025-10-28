@@ -1,6 +1,6 @@
 package uy.edu.ort.obligatorioferranty.modelo;
 
-public class Estado {
+public abstract class Estado {
 
     private String nombre;
 
@@ -15,4 +15,10 @@ public class Estado {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public abstract boolean puedeTransitar();
+
+    public abstract boolean puedeBonificar();
+
+    public abstract boolean puedeNotificar();
 }
