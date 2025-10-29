@@ -6,9 +6,10 @@ public class Vehiculo {
     private String modelo;
     private String color;
     private Categoria categoria;
-    private Propietario propietario;
+    private UsuarioPropietario propietario;
 
-    public Vehiculo(String matricula, String modelo, String color, Categoria categoria, Propietario propietario) {
+    public Vehiculo(String matricula, String modelo, String color, Categoria categoria,
+            UsuarioPropietario propietario) {
         this.matricula = matricula;
         this.modelo = modelo;
         this.color = color;
@@ -48,11 +49,11 @@ public class Vehiculo {
         this.categoria = categoria;
     }
 
-    public Propietario getPropietario() {
+    public UsuarioPropietario getPropietario() {
         return propietario;
     }
 
-    public void setPropietario(Propietario propietario) {
+    public void setPropietario(UsuarioPropietario propietario) {
         this.propietario = propietario;
     }
 }

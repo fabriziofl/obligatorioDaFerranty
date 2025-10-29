@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class Asignacion {
 
-    private Propietario propietario;
+    private UsuarioPropietario propietario;
     private Bonificacion bonificacion;
     private Puesto puesto;
     private Date fechaAsignacion;
@@ -18,11 +18,11 @@ public class Asignacion {
         this.transito = transito;
     }
 
-    public Propietario getPropietario() {
+    public UsuarioPropietario getPropietario() {
         return propietario;
     }
 
-    public void setPropietario(Propietario propietario) {
+    public void setPropietario(UsuarioPropietario propietario) {
         this.propietario = propietario;
     }
 
@@ -50,7 +50,7 @@ public class Asignacion {
         this.fechaAsignacion = fechaAsignacion;
     }
 
-    public Asignacion(Propietario propietario, Bonificacion bonificacion, Puesto puesto, Date fechaAsignacion) {
+    public Asignacion(UsuarioPropietario propietario, Bonificacion bonificacion, Puesto puesto, Date fechaAsignacion) {
         this.propietario = propietario;
         this.bonificacion = bonificacion;
         this.puesto = puesto;

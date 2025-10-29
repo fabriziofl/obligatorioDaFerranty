@@ -5,29 +5,27 @@ public abstract class Usuario {
     private String documento;
     private String contrasenia;
 
-    private String nombre;
-    private String apellido;
+    private String nombreCompleto;
 
-    public Usuario(String documento, String contrasenia, String nombre, String apellido) {
+    public Usuario(String documento, String contrasenia, String nombreCompleto) {
         this.documento = documento;
         this.contrasenia = contrasenia;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this.nombreCompleto = nombreCompleto;
     }
 
     public String getDocumento() {
         return documento;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
     public String getContrasenia() {
         return contrasenia;
+    }
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
     }
 }

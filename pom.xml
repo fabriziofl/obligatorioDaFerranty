@@ -5,7 +5,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.7</version>
+		<!-- use a Spring Boot 3.1.x release compatible with Spring Framework 6 -->
+		<version>3.1.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>uy.edu.ort</groupId>
@@ -47,11 +48,7 @@
 			<scope>test</scope>
 		</dependency>
 	
-   <dependency>
-     <groupId>org.springframework</groupId>
-     <artifactId>spring-context</artifactId>
-     <version>5.1.9.RELEASE</version>
-   </dependency>
+		<!-- Removed explicit old spring-context dependency to avoid mixing Spring Framework 5 with Spring Boot 3 (Spring Framework 6) -->
  </dependencies>
 
 	<build>
@@ -59,6 +56,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- ensure Java version for compilation -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<release>${java.version}</release>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

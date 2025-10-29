@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.servlet.http.HttpSession;
+import uy.edu.ort.obligatorioferranty.modelo.Estado;
 import uy.edu.ort.obligatorioferranty.modelo.Fachada;
 import uy.edu.ort.obligatorioferranty.modelo.Sesion;
 
 import java.util.List;
 
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/login")
@@ -28,7 +28,7 @@ public class ControladorLogin {
 
         // guardo la ssion de la logica en la sesion http
         sessionHttp.setAttribute("usuarioPropietario", sesion);
-        return Respuesta.lista(new Respuesta("loginExitoso", "menu-propietario.html"));
+        return Respuesta.lista(new Respuesta("loginExitoso", "vista-exito.html"));
     }
 
     @PostMapping("/logoutPropietario")

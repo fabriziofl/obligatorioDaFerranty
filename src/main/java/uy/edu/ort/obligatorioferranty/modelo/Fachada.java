@@ -19,6 +19,10 @@ public class Fachada {
         return sistemaAcceso.loginPropietario(documento, contrasenia);
     }
 
+    public void agregarUsuarioPropietario(String documento, String contrasenia, String nombreCompleto, Estado estado) {
+        sistemaAcceso.agregarUsuarioPropietario(documento, contrasenia, nombreCompleto, estado);
+    }
+
     public ArrayList<Sesion> getSesionesActivas() {
         return sistemaAcceso.getSesionesActivas();
     }
